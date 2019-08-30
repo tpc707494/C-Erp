@@ -20,7 +20,7 @@ using WindowsFormsApp1.view.baseinfo;
 
 namespace DotNetBarProject
 {
-    public partial class Form1 : Office2007Form//DevExpress.XtraEditors.XtraForm
+    public partial class Form1 : Office2007Form
     {
 
         private SqlSugarClient db;
