@@ -1,0 +1,1076 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DF17C04-72C6-43C9-BAAC-6C5B7467EC71}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DotNetBarProject</RootNamespace>
+    <AssemblyName>ERP印染管理</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bitbug_favicon%281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AutoSizeFormClass.cs" />
+    <Compile Include="ChenLiao\clsPLCcl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChenLiao\clsPLCcl.Designer.cs">
+      <DependentUpon>clsPLCcl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChenLiao\frmCL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChenLiao\frmCL.designer.cs">
+      <DependentUpon>frmCL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChenLiao\frmCLend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChenLiao\frmCLend.designer.cs">
+      <DependentUpon>frmCLend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChenLiao\frmCLinputMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChenLiao\frmCLinputMC.designer.cs">
+      <DependentUpon>frmCLinputMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChenLiao\frmCLsch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChenLiao\frmCLsch.designer.cs">
+      <DependentUpon>frmCLsch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChenLiao\frmError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChenLiao\frmError.designer.cs">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DL\clsCheng.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DL\clsCheng.Designer.cs">
+      <DependentUpon>clsCheng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\clsPLCdl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DL\clsPLCdl.Designer.cs">
+      <DependentUpon>clsPLCdl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\enumCheng.cs" />
+    <Compile Include="DL\frmDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DL\frmDL.designer.cs">
+      <DependentUpon>frmDL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\frmDLend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DL\frmDLend.designer.cs">
+      <DependentUpon>frmDLend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\frmDLsch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DL\frmDLsch.designer.cs">
+      <DependentUpon>frmDLsch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\frmError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DL\frmError.designer.cs">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\frmTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DL\frmTS.designer.cs">
+      <DependentUpon>frmTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\frmZDsel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DL\frmZDsel.designer.cs">
+      <DependentUpon>frmZDsel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRes.Designer.cs">
+      <DependentUpon>FormRes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\about\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\about\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\Cangwei.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\Cangwei.Designer.cs">
+      <DependentUpon>Cangwei.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\PKDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\PKDH.Designer.cs">
+      <DependentUpon>PKDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\CiLiaoSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\CiLiaoSet.Designer.cs">
+      <DependentUpon>CiLiaoSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\FrmPSW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\FrmPSW.Designer.cs">
+      <DependentUpon>FrmPSW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\JiTaiYuL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\JiTaiYuL.Designer.cs">
+      <DependentUpon>JiTaiYuL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\ShenChanGx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\ShenChanGx.Designer.cs">
+      <DependentUpon>ShenChanGx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\DiLiaoSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\DiLiaoSet.Designer.cs">
+      <DependentUpon>DiLiaoSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\ShenChanLc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\ShenChanLc.Designer.cs">
+      <DependentUpon>ShenChanLc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\ZhujiName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\ZhujiName.Designer.cs">
+      <DependentUpon>ZhujiName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\RanHuaName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\RanHuaName.Designer.cs">
+      <DependentUpon>RanHuaName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\RanHuaType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\RanHuaType.Designer.cs">
+      <DependentUpon>RanHuaType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\ColorType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\ColorType.Designer.cs">
+      <DependentUpon>ColorType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\ColorName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\ColorName.Designer.cs">
+      <DependentUpon>ColorName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\GreigeName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\GreigeName.Designer.cs">
+      <DependentUpon>GreigeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\EmployeeName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\EmployeeName.Designer.cs">
+      <DependentUpon>EmployeeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\baseinfo\Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\baseinfo\customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\chanliang\FanXiuDjCha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\chanliang\FanXiuDjCha.Designer.cs">
+      <DependentUpon>FanXiuDjCha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\chanliang\ChanLiangDjCha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\chanliang\ChanLiangDjCha.Designer.cs">
+      <DependentUpon>ChanLiangDjCha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\chanliang\FanXiuDjMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\chanliang\FanXiuDjMake.Designer.cs">
+      <DependentUpon>FanXiuDjMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\chanliang\ChanLiangDjMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\chanliang\ChanLiangDjMake.Designer.cs">
+      <DependentUpon>ChanLiangDjMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Chenpincang\ChenBenChuCangChaXun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Chenpincang\ChenBenChuCangChaXun.Designer.cs">
+      <DependentUpon>ChenBenChuCangChaXun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Chenpincang\ChenBenJInCangChaXun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Chenpincang\ChenBenJInCangChaXun.Designer.cs">
+      <DependentUpon>ChenBenJInCangChaXun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Chenpincang\MaDanChaXun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Chenpincang\MaDanChaXun.Designer.cs">
+      <DependentUpon>MaDanChaXun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Chenpincang\ChenBenJinCangMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Chenpincang\ChenBenJinCangMake.Designer.cs">
+      <DependentUpon>ChenBenJinCangMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Chenpincang\MaDanMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Chenpincang\MaDanMake.Designer.cs">
+      <DependentUpon>MaDanMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\data\ClsLogUser.cs" />
+    <Compile Include="view\custom\data\leibie.cs" />
+    <Compile Include="view\custom\data\ReportViewerMessagesZhcn.cs" />
+    <Compile Include="view\custom\data\SqlBase.cs" />
+    <Compile Include="DL\StruChengPara.cs" />
+    <Compile Include="view\custom\data\UserProc.cs" />
+    <Compile Include="view\custom\Models\CP_TABLE.cs" />
+    <Compile Include="view\custom\Models\BaseIList.cs" />
+    <Compile Include="view\custom\Models\BaseKH.cs" />
+    <Compile Include="view\custom\Models\BaseList.cs" />
+    <Compile Include="view\custom\Models\LCKA.cs" />
+    <Compile Include="view\custom\Models\LCMX.cs" />
+    <Compile Include="view\custom\Models\PeibuCang.cs" />
+    <Compile Include="view\custom\Models\RSManage1.cs" />
+    <Compile Include="view\custom\Models\RSManage.cs" />
+    <Compile Include="view\custom\Models\T_BaseQX.cs" />
+    <Compile Include="view\custom\Models\T_Base.cs" />
+    <Compile Include="view\custom\Models\T_PFcheng.cs" />
+    <Compile Include="view\custom\Models\T_PFdata.cs" />
+    <Compile Include="view\custom\Models\T_PFdataT.cs" />
+    <Compile Include="view\custom\Models\T_PFshijian.cs" />
+    <Compile Include="view\custom\Models\T_PFmain.cs" />
+    <Compile Include="view\custom\view\ChkCoboDGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\ChkCoboDGV.Designer.cs">
+      <DependentUpon>ChkCoboDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\ChkCoboEX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\ChkCoboEX.Designer.cs">
+      <DependentUpon>ChkCoboEX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\ChkDtime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\ChkDtime.Designer.cs">
+      <DependentUpon>ChkDtime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\ChkTxt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\ChkTxt.Designer.cs">
+      <DependentUpon>ChkTxt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\ClsCheng.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\ClsCheng.Designer.cs">
+      <DependentUpon>ClsCheng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\ClsPLCdl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\ClsPLCdl.Designer.cs">
+      <DependentUpon>ClsPLCdl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\coboDGV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\coboDGV.Designer.cs">
+      <DependentUpon>coboDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\coboEX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\coboEX.Designer.cs">
+      <DependentUpon>coboEX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\DGV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\DGV.Designer.cs">
+      <DependentUpon>DGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\dgvEX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\dgvEX.Designer.cs">
+      <DependentUpon>dgvEX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\dgvEXprnOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\dgvEXprnOptions.Designer.cs">
+      <DependentUpon>dgvEXprnOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\FrmError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\FrmError.Designer.cs">
+      <DependentUpon>FrmError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\LblCoboDGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\LblCoboDGV.Designer.cs">
+      <DependentUpon>LblCoboDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\LblCoboEX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\LblCoboEX.Designer.cs">
+      <DependentUpon>LblCoboEX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\lblDGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\lblDGV.Designer.cs">
+      <DependentUpon>lblDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\LblTxt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\LblTxt.Designer.cs">
+      <DependentUpon>LblTxt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\LblWait.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\LblWait.Designer.cs">
+      <DependentUpon>LblWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\MultiColumComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\MultiColumComboBox.Designer.cs">
+      <DependentUpon>MultiColumComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\OurButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\OurButton.Designer.cs">
+      <DependentUpon>OurButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\TabEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\custom\view\TabEx.Designer.cs">
+      <DependentUpon>TabEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\custom\view\ThemedColors.cs" />
+    <Compile Include="view\dzd\DuiZhangDanMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\dzd\DuiZhangDanMake.Designer.cs">
+      <DependentUpon>DuiZhangDanMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\dzd\DuiZhangDanCha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\dzd\DuiZhangDanCha.Designer.cs">
+      <DependentUpon>DuiZhangDanCha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmPrn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmPrn.Designer.cs">
+      <DependentUpon>FrmPrn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\JiHuaBiao\JHBChaXun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\JiHuaBiao\JHBChaXun.Designer.cs">
+      <DependentUpon>JHBChaXun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\JiHuaBiao\JHBMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\JiHuaBiao\JHBMake.Designer.cs">
+      <DependentUpon>JHBMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\JinDu\JinDuCha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\JinDu\JinDuCha.Designer.cs">
+      <DependentUpon>JinDuCha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\lck\LckBarMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\lck\LckBarMake.Designer.cs">
+      <DependentUpon>LckBarMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\lck\LckBarSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\lck\LckBarSearch.Designer.cs">
+      <DependentUpon>LckBarSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\peibucang\Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\peibucang\Base.Designer.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\peibucang\PBLin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\peibucang\PBLin.Designer.cs">
+      <DependentUpon>PBLin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\peibucang\PBJin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\peibucang\PBJin.Designer.cs">
+      <DependentUpon>PBJin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmDLJL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmDLJL.Designer.cs">
+      <DependentUpon>FrmDLJL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmPFCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmPFCB.Designer.cs">
+      <DependentUpon>FrmPFCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmRLRK1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmRLRK1.Designer.cs">
+      <DependentUpon>FrmRLRK1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmRHLCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmRHLCB.Designer.cs">
+      <DependentUpon>FrmRHLCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmRLLY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmRLLY.Designer.cs">
+      <DependentUpon>FrmRLLY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmRLRK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RanHuaCB\FrmRLRK.Designer.cs">
+      <DependentUpon>FrmRLRK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RecipeManager\Laiyang\Frm_LYDJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RecipeManager\Laiyang\Frm_LYDJ.Designer.cs">
+      <DependentUpon>Frm_LYDJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RecipeManager\Laiyang\Frm_SYDJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RecipeManager\Laiyang\Frm_SYDJ.Designer.cs">
+      <DependentUpon>Frm_SYDJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RecipeManager\ShengChanPeiFang\SCMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RecipeManager\ShengChanPeiFang\SCMake.Designer.cs">
+      <DependentUpon>SCMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RecipeManager\ShengChanPeiFang\SCSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RecipeManager\ShengChanPeiFang\SCSearch.Designer.cs">
+      <DependentUpon>SCSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RecipeManager\SHManager\SHdj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RecipeManager\SHManager\SHdj.Designer.cs">
+      <DependentUpon>SHdj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RecipeManager\XiaoYangPeiF\FrmXY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RecipeManager\XiaoYangPeiF\FrmXY.Designer.cs">
+      <DependentUpon>FrmXY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RecipeManager\XiaoYangPeiF\Make.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RecipeManager\XiaoYangPeiF\Make.designer.cs">
+      <DependentUpon>Make.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RecipeManager\XiaoYangPeiF\Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RecipeManager\XiaoYangPeiF\Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RenShiManager\Tongxunlu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RenShiManager\Tongxunlu.Designer.cs">
+      <DependentUpon>Tongxunlu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChenLiao\frmCLsch.resx">
+      <DependentUpon>frmCLsch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChenLiao\frmError.resx">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DL\frmDL.resx">
+      <DependentUpon>frmDL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DL\frmDLend.resx">
+      <DependentUpon>frmDLend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DL\frmDLsch.resx">
+      <DependentUpon>frmDLsch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DL\frmError.resx">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DL\frmTS.resx">
+      <DependentUpon>frmTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DL\frmZDsel.resx">
+      <DependentUpon>frmZDsel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRes.resx">
+      <DependentUpon>FormRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="view\about\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\Cangwei.resx">
+      <DependentUpon>Cangwei.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\PKDH.resx">
+      <DependentUpon>PKDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\CiLiaoSet.resx">
+      <DependentUpon>CiLiaoSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\FrmPSW.resx">
+      <DependentUpon>FrmPSW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\JiTaiYuL.resx">
+      <DependentUpon>JiTaiYuL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\ShenChanGx.resx">
+      <DependentUpon>ShenChanGx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\DiLiaoSet.resx">
+      <DependentUpon>DiLiaoSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\ShenChanLc.resx">
+      <DependentUpon>ShenChanLc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\ZhujiName.resx">
+      <DependentUpon>ZhujiName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\RanHuaName.resx">
+      <DependentUpon>RanHuaName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\RanHuaType.resx">
+      <DependentUpon>RanHuaType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\ColorType.resx">
+      <DependentUpon>ColorType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\ColorName.resx">
+      <DependentUpon>ColorName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\GreigeName.resx">
+      <DependentUpon>GreigeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\EmployeeName.resx">
+      <DependentUpon>EmployeeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\baseinfo\customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\chanliang\FanXiuDjCha.resx">
+      <DependentUpon>FanXiuDjCha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\chanliang\ChanLiangDjCha.resx">
+      <DependentUpon>ChanLiangDjCha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\chanliang\FanXiuDjMake.resx">
+      <DependentUpon>FanXiuDjMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\chanliang\ChanLiangDjMake.resx">
+      <DependentUpon>ChanLiangDjMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Chenpincang\ChenBenChuCangChaXun.resx">
+      <DependentUpon>ChenBenChuCangChaXun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Chenpincang\ChenBenJInCangChaXun.resx">
+      <DependentUpon>ChenBenJInCangChaXun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Chenpincang\MaDanChaXun.resx">
+      <DependentUpon>MaDanChaXun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Chenpincang\ChenBenJinCangMake.resx">
+      <DependentUpon>ChenBenJinCangMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Chenpincang\MaDanMake.resx">
+      <DependentUpon>MaDanMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\custom\view\ChkCoboDGV.resx">
+      <DependentUpon>ChkCoboDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\custom\view\ChkCoboEX.resx">
+      <DependentUpon>ChkCoboEX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\custom\view\ChkDtime.resx">
+      <DependentUpon>ChkDtime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\custom\view\ChkTxt.resx">
+      <DependentUpon>ChkTxt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\custom\view\coboDGV.resx">
+      <DependentUpon>coboDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\custom\view\FrmError.resx">
+      <DependentUpon>FrmError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\custom\view\LblCoboDGV.resx">
+      <DependentUpon>LblCoboDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\custom\view\LblCoboEX.resx">
+      <DependentUpon>LblCoboEX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\custom\view\lblDGV.resx">
+      <DependentUpon>lblDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\custom\view\LblTxt.resx">
+      <DependentUpon>LblTxt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\dzd\DuiZhangDanMake.resx">
+      <DependentUpon>DuiZhangDanMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\dzd\DuiZhangDanCha.resx">
+      <DependentUpon>DuiZhangDanCha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmPrn.resx">
+      <DependentUpon>FrmPrn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\JiHuaBiao\JHBChaXun.resx">
+      <DependentUpon>JHBChaXun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\JiHuaBiao\JHBMake.resx">
+      <DependentUpon>JHBMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\JinDu\JinDuCha.resx">
+      <DependentUpon>JinDuCha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\lck\LckBarMake.resx">
+      <DependentUpon>LckBarMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\lck\LckBarSearch.resx">
+      <DependentUpon>LckBarSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\peibucang\Base.resx">
+      <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\peibucang\PBLin.resx">
+      <DependentUpon>PBLin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\peibucang\PBJin.resx">
+      <DependentUpon>PBJin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RanHuaCB\FrmDLJL.resx">
+      <DependentUpon>FrmDLJL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RanHuaCB\FrmPFCB.resx">
+      <DependentUpon>FrmPFCB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RanHuaCB\FrmRHLCB.resx">
+      <DependentUpon>FrmRHLCB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RanHuaCB\FrmRLRK1.resx">
+      <DependentUpon>FrmRLRK1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RanHuaCB\FrmRLLY.resx">
+      <DependentUpon>FrmRLLY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RanHuaCB\FrmRLRK.resx">
+      <DependentUpon>FrmRLRK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RDLC\rptMD.rdlc" />
+    <EmbeddedResource Include="view\RDLC\rptTXL.rdlc" />
+    <EmbeddedResource Include="view\RDLC\rptLD.rdlc" />
+    <EmbeddedResource Include="view\RDLC\rptJLD.rdlc" />
+    <EmbeddedResource Include="view\RDLC\rptSchCB.rdlc" />
+    <EmbeddedResource Include="view\RecipeManager\Laiyang\Frm_LYDJ.resx">
+      <DependentUpon>Frm_LYDJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RecipeManager\Laiyang\Frm_SYDJ.resx">
+      <DependentUpon>Frm_SYDJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RecipeManager\ShengChanPeiFang\SCMake.resx">
+      <DependentUpon>SCMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RecipeManager\ShengChanPeiFang\SCSearch.resx">
+      <DependentUpon>SCSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RecipeManager\SHManager\SHdj.resx">
+      <DependentUpon>SHdj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RecipeManager\XiaoYangPeiF\FrmXY.resx">
+      <DependentUpon>FrmXY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RecipeManager\XiaoYangPeiF\Make.resx">
+      <DependentUpon>Make.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RecipeManager\XiaoYangPeiF\Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\RenShiManager\Tongxunlu.resx">
+      <DependentUpon>Tongxunlu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Report2.rdlc" />
+    <EmbeddedResource Include="view\Report1.rdlc" />
+    <EmbeddedResource Include="view\rptXY.rdlc" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\DotNetBarProject.view.custom.Models.BaseIList.datasource" />
+    <None Include="Properties\DataSources\DotNetBarProject.view.custom.Models.LCKA.datasource" />
+    <None Include="Properties\DataSources\DotNetBarProject.view.custom.Models.LCMX.datasource" />
+    <None Include="Properties\DataSources\DotNetBarProject.view.custom.Models.RSManage1.datasource" />
+    <None Include="Properties\DataSources\DotNetBarProject.view.custom.Models.T_PFdata.datasource" />
+    <None Include="Properties\DataSources\DotNetBarProject.view.custom.Models.T_PFdataT.datasource" />
+    <None Include="Properties\DataSources\DotNetBarProject.view.custom.Models.T_PFmain.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuowu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dayin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图片1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XinJian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XinJian1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enable_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disable_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xinjian_no.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\操作-保存1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\操作-保存.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib">
+      <HintPath>bin\x86\Release\lib\BarcodeLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\lib\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\lib\DevComponents.DotNetBar2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=14.1.0.34, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\lib\DevComponents.Instrumentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\x86\Release\lib\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.MSXML, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\x86\Release\lib\Microsoft.MSXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\lib\Microsoft.ReportViewer.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\lib\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\lib\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>bin\x86\Release\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>bin\x86\Release\lib\NPOI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SqlSugar">
+      <HintPath>bin\x86\Release\lib\SqlSugar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\x86\Release\lib\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bitbug_favicon%281%29.ico" />
+    <Content Include="favicon.ico" />
+    <None Include="Resources\QQ图片20190422214210.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

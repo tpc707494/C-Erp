@@ -1,0 +1,57 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DotNetBarProject.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DLjihao" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="rKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="rtime" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PFroundYL" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DLparaTong" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="DLparaMin" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="DLparaDitou" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1,0,400,0.6,3,100,0.4,3|2,0,400,0.6,3,100,0.4,3|3,0,400,0.6,3,100,0.4,3|4,0,400,0.6,3,100,0.4,3|5,0,400,0.6,3,100,0.4,3|6,0,400,0.6,3,100,0.4,3|7,0,400,0.6,3,100,0.4,3|8,0,400,0.6,3,100,0.4,3|9,0,400,0.6,3,100,0.4,3|10,0,400,0.6,3,100,0.4,3|11,0,400,0.6,3,100,0.4,3|12,0,400,0.6,3,100,0.4,3|13,0,400,0.6,3,100,0.4,3|14,0,400,0.6,3,100,0.4,3|15,0,400,0.6,3,100,0.4,3</Value>
+    </Setting>
+    <Setting Name="DLparaCheng" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM2,9600,8,none,XK3190C8,100,50000,0,g,3,true,1,false,50,1000|COM3,9600,8,none,XK3190C8,100,50000,0,g,3,true,1,false,50,1000|COM4,9600,8,none,XK3190C8,100,50000,0,g,3,true,1,false,50,1000</Value>
+    </Setting>
+    <Setting Name="DLparaPLC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1,38400,7,even,100</Value>
+    </Setting>
+    <Setting Name="paraKeyB" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">16</Value>
+    </Setting>
+    <Setting Name="CLjihao" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="CLparaCheng" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM2,9600,8,None,1,True,1500,1500|COM3,9600,8,None,1,True,500,500|COM4,9600,8,None,1,True,500,500|COM5,9600,8,None,1,True,500,500</Value>
+    </Setting>
+    <Setting Name="CLparaPLC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1,38400,7,even,100</Value>
+    </Setting>
+    <Setting Name="DiLiao" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ChengLiao" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="islogin" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="dqtime" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
